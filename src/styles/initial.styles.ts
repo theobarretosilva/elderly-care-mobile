@@ -1,18 +1,21 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const { width, height } = Dimensions.get('window');
 
 export const initialStyles = StyleSheet.create({
     container: {
         display: 'flex',
         flexDirection: 'column',
-        height: '100%',
-        width: '100%'
+        height: height * 1,
+        width: width * 1,
+        flex: 1
     },
     img: {
         position: 'absolute',
         marginTop: 25,
         right: 25,
-        width: 40,
-        height: 40,
+        width: width * 0.2,
+        height: height * 0.05,
         resizeMode: 'contain',
     },
     txtInicial: {
@@ -20,17 +23,17 @@ export const initialStyles = StyleSheet.create({
         fontWeight: 700,
         fontSize: 25,
         color: '#FFF',
-        width: 300,
+        width: width * 0.7,
         marginTop: 120,
         marginLeft: 25,
     },
     btnEntrar: {
         backgroundColor: '#2F7DCA',
         height: 40,
-        width: 'auto',
+        width: width * 0.8,
         marginLeft: 25,
         marginRight: 25,
-        marginTop: 430,
+        marginTop: 400,
         shadowColor: '#000',
         shadowOffset: { width: 2, height: 2 },
         shadowOpacity: 0.5,
@@ -49,7 +52,7 @@ export const initialStyles = StyleSheet.create({
     btnCriar: {
         backgroundColor: '#E0F4FF',
         height: 40,
-        width: 'auto',
+        width: width * 0.8,
         marginLeft: 25,
         marginRight: 25,
         marginTop: 15,
@@ -77,5 +80,6 @@ export const initialStyles = StyleSheet.create({
         fontFamily: 'Urbanist, Arial',
         fontSize: 16,
         fontWeight: 500,
+        width: 'auto',
     }
 });

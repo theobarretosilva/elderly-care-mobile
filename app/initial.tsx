@@ -1,10 +1,8 @@
 import { Image, ImageBackground, Pressable, Text, View } from "react-native";
 import { initialStyles } from "@/src/styles/initial.styles";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Initial() {
     return (
-        <SafeAreaView style={{ flex: 1 }}>
             <ImageBackground
                 style={initialStyles.container}
                 source={require('../assets/images/fundo_initial.svg')}
@@ -25,7 +23,6 @@ export default function Initial() {
                 </Pressable>
                 <Text style={initialStyles.txtFinal} >Para responsáveis e cuidadores</Text>
             </ImageBackground>
-        </SafeAreaView>
         
     )
 }
