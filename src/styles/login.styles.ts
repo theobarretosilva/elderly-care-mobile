@@ -60,5 +60,19 @@ export const loginStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: width * 0.8,
+    },
+    sectionCheck: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    checkbox: {
+        backgroundColor: '#000',
+        borderRadius: 5
+    },
+    txtCheck: {
+        fontFamily: 'Urbanist',
+        fontWeight: 600,
+        fontSize: 15,
+        marginLeft: 6
     }
 })

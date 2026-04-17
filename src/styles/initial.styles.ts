@@ -12,27 +12,27 @@ export const initialStyles = StyleSheet.create({
     },
     img: {
         position: 'absolute',
-        marginTop: 25,
-        right: 25,
-        width: width * 0.2,
-        height: height * 0.05,
+        marginTop: 20,
+        right: 20,
+        width: width * 0.12,
+        height: height * 0.1,
         resizeMode: 'contain',
     },
     txtInicial: {
-        fontFamily: 'Urbanist, Arial',
+        fontFamily: 'Urbanist',
         fontWeight: 700,
-        fontSize: 25,
+        fontSize: 26,
         color: '#FFF',
         width: width * 0.7,
-        marginTop: 120,
-        marginLeft: 25,
+        marginTop: 170,
+        marginLeft: 30,
     },
     btnEntrar: {
         backgroundColor: '#2F7DCA',
         height: 40,
-        width: width * 0.8,
-        marginLeft: 25,
-        marginRight: 25,
+        width: 'auto',
+        marginLeft: 30,
+        marginRight: 30,
         marginTop: 400,
         shadowColor: '#000',
         shadowOffset: { width: 2, height: 2 },
@@ -41,7 +41,8 @@ export const initialStyles = StyleSheet.create({
         borderRadius: 5,
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        elevation: 2
     },
     txtEntrar: {
         fontFamily: 'Urbanist, Arial',
@@ -52,9 +53,9 @@ export const initialStyles = StyleSheet.create({
     btnCriar: {
         backgroundColor: '#E0F4FF',
         height: 40,
-        width: width * 0.8,
-        marginLeft: 25,
-        marginRight: 25,
+        width: 'auto',
+        marginLeft: 30,
+        marginRight: 30,
         marginTop: 15,
         shadowColor: '#000',
         shadowOffset: { width: 2, height: 2 },
@@ -65,7 +66,8 @@ export const initialStyles = StyleSheet.create({
         borderWidth: 2,
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        elevation: 2
     },
     txtCriar: {
         fontFamily: 'Urbanist, Arial',
@@ -76,10 +78,10 @@ export const initialStyles = StyleSheet.create({
     txtFinal: {
         alignSelf: 'center',
         marginTop: 6,
-        color: "#000",
+        color: "#000000",
         fontFamily: 'Urbanist, Arial',
         fontSize: 16,
-        fontWeight: 500,
+        fontWeight: 600,
         width: 'auto',
     }
 });

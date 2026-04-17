@@ -7,12 +7,12 @@ export default function Initial() {
     return (
             <ImageBackground
                 style={initialStyles.container}
-                source={require('../assets/images/fundo_initial.svg')}
+                source={require('../assets/images/fundo_initial.png')}
                 resizeMode="contain"
             >
                 <Image 
                     style={initialStyles.img}
-                    source={require('../assets/images/logo_canto.svg')}
+                    source={require('../assets/images/logo_canto.png')}
                 />
                 <Text style={initialStyles.txtInicial}>
                     Acompanhe o cuidado de quem você ama, em tempo real ❤️
@@ -20,7 +20,7 @@ export default function Initial() {
                 <Pressable style={initialStyles.btnEntrar} onPress={()=>{router.replace("/login")}}>
                     <Text style={initialStyles.txtEntrar}>Entrar</Text>
                 </Pressable>
-                <Pressable style={initialStyles.btnCriar}>
+                <Pressable style={initialStyles.btnCriar} onPress={()=>{router.replace("/register")}}>
                     <Text style={initialStyles.txtCriar}>Criar conta</Text>
                 </Pressable>
                 <Text style={initialStyles.txtFinal} >Para responsáveis e cuidadores</Text>

@@ -2,10 +2,12 @@ import { router } from "expo-router";
 import { useState } from "react";
 import { Image, KeyboardAvoidingView, Platform, Text, TextInput, View } from "react-native";
 import { loginStyles } from "../src/styles/login.styles";
+import { Checkbox } from 'expo-checkbox';
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isChecked, setChecked] = useState(false);
 
   function handleLogin() {
     // Aqui depois vamos conectar com a API
@@ -37,7 +39,11 @@ export default function Login() {
           placeholder="Senha"
         />
         <View style={loginStyles.viewBaixoSenha}>
-          
+          <View style={loginStyles.sectionCheck}>
+            <Checkbox style={loginStyles.checkbox} value={isChecked} onValueChange={setChecked} />
+            <Text style={loginStyles.txtCheck}>Manter conectado</Text>
+          </View>
+          <Text>Esqueci a senha</Text>
         </View>
       </View>
     </KeyboardAvoidingView>
