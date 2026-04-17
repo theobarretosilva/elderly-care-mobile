@@ -1,7 +1,9 @@
 import { Image, ImageBackground, Pressable, Text, View } from "react-native";
 import { initialStyles } from "@/src/styles/initial.styles";
+import { router } from "expo-router";
 
 export default function Initial() {
+
     return (
             <ImageBackground
                 style={initialStyles.container}
@@ -15,7 +17,7 @@ export default function Initial() {
                 <Text style={initialStyles.txtInicial}>
                     Acompanhe o cuidado de quem você ama, em tempo real ❤️
                 </Text>
-                <Pressable style={initialStyles.btnEntrar}>
+                <Pressable style={initialStyles.btnEntrar} onPress={()=>{router.replace("/login")}}>
                     <Text style={initialStyles.txtEntrar}>Entrar</Text>
                 </Pressable>
                 <Pressable style={initialStyles.btnCriar}>

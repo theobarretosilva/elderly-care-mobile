@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { useState } from "react";
-import { KeyboardAvoidingView, Platform, Text, View } from "react-native";
-import { styles } from "../src/styles/login.styles";
+import { Image, KeyboardAvoidingView, Platform, Text, TextInput, View } from "react-native";
+import { loginStyles } from "../src/styles/login.styles";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -17,11 +17,28 @@ export default function Login() {
 
   return (
     <KeyboardAvoidingView
-      style={styles.container}
+      style={loginStyles.container}
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <View style={styles.container}>
-        <Text>Entrar</Text>
+      <View style={loginStyles.container}>
+        <Image 
+          style={loginStyles.logoTopo}
+          source={require('../assets/images/logo_fundo_claro.png')}
+        />
+        <Text style={loginStyles.txtBemVindo} >Bem-vindo(a) de volta 👋</Text>
+        <Text style={loginStyles.txtAcompanhe}>Acompanhe o cuidado em tempo real</Text>
+        <Text style={loginStyles.txtInsira}>Insira suas informações:</Text>
+        <TextInput 
+          style={loginStyles.input}
+          placeholder="E-mail"
+        />
+        <TextInput 
+          style={loginStyles.input}
+          placeholder="Senha"
+        />
+        <View style={loginStyles.viewBaixoSenha}>
+          
+        </View>
       </View>
     </KeyboardAvoidingView>
   );
