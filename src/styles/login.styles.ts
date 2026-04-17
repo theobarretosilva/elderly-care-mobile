@@ -31,7 +31,8 @@ export const loginStyles = StyleSheet.create({
         fontWeight: 700,
         fontSize: 23,
         marginLeft: 30,
-        marginRight: 30
+        marginRight: 30,
+        width: width * 0.8
     },
     txtInsira: {
         fontFamily: 'Urbanist',
@@ -88,5 +89,39 @@ export const loginStyles = StyleSheet.create({
         fontSize: 16,
         marginLeft: 6,
         color: '#2F7DCA'
+    },
+    btnEntrar: {
+        backgroundColor: '#2F7DCA',
+        height: 40,
+        width: 'auto',
+        marginLeft: 30,
+        marginRight: 30,
+        marginTop: 30,
+        shadowColor: '#000',
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        borderRadius: 5,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 2
+    },
+    txtEntrar: {
+        fontFamily: 'Urbanist, Arial',
+        fontSize: 18,
+        fontWeight: 600,
+        color: '#FFF'
+    },
+    txtNao: {
+        alignSelf: 'center',
+        marginTop: 10,
+        fontFamily: 'Urbanist',
+        fontSize: 17,
+        color: '#000'
+    },
+    txtCriar: {
+        color: '#2F7DCA',
+        fontWeight: 700
     }
 })

@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { useState } from "react";
-import { Image, KeyboardAvoidingView, Platform, Text, TextInput, View } from "react-native";
+import { Image, KeyboardAvoidingView, Platform, Pressable, Text, TextInput, View } from "react-native";
 import { loginStyles } from "../src/styles/login.styles";
 import { Checkbox } from 'expo-checkbox';
 
@@ -10,10 +10,13 @@ export default function Login() {
   const [isChecked, setChecked] = useState(false);
 
   function handleLogin() {
-    // Aqui depois vamos conectar com a API
+    if (!email || !password) {
+      alert("Preencha todos os campos");
+      return;
+    }
+
     console.log({ email, password });
 
-    // Simulação de login → entra no app
     router.replace("/(tabs)");
   }
 
@@ -33,10 +36,15 @@ export default function Login() {
         <TextInput 
           style={loginStyles.input}
           placeholder="E-mail"
+          value={email}
+          onChangeText={setEmail}
         />
         <TextInput 
           style={loginStyles.input}
           placeholder="Senha"
+          secureTextEntry
+          value={password}
+          onChangeText={setPassword}
         />
         <View style={loginStyles.viewBaixoSenha}>
           <View style={loginStyles.sectionCheck}>
@@ -45,6 +53,17 @@ export default function Login() {
           </View>
           <Text style={loginStyles.txtEsqueci}>Esqueci a senha</Text>
         </View>
+        <Pressable
+          style={loginStyles.btnEntrar}
+          onPress={handleLogin}
+          disabled={!email || !password}
+        >
+          <Text style={loginStyles.txtEntrar}>Entrar</Text>
+        </Pressable>
+        <Text style={loginStyles.txtNao}>
+          Não tem conta?
+          <Text style={loginStyles.txtCriar}> Criar conta!</Text>
+        </Text>
       </View>
     </KeyboardAvoidingView>
   );
