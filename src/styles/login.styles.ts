@@ -8,37 +8,40 @@ export const loginStyles = StyleSheet.create({
         backgroundColor: '#E0F4FF',
         display: 'flex',
         flexDirection: 'column',
-        paddingTop: 20,
-        paddingRight: 20,
-        paddingBottom: 20,
-        paddingLeft: 20,
         width: 'auto',
         height: 'auto'
     },
     logoTopo: {
-        width: '30%',
+        width: '25%',
         height: '15%',
         resizeMode: 'contain',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginTop: 50,
     },
     txtBemVindo: {
         fontFamily: 'Urbanist',
-        fontWeight: 600,
+        fontWeight: 700,
         fontSize: 20,
-        marginTop: 30
+        marginTop: 40,
+        marginLeft: 30,
+        marginRight: 30
     },
     txtAcompanhe: {
         fontFamily: 'Urbanist',
-        fontWeight: 600,
-        fontSize: 24
+        fontWeight: 700,
+        fontSize: 23,
+        marginLeft: 30,
+        marginRight: 30
     },
     txtInsira: {
         fontFamily: 'Urbanist',
         fontWeight: 600,
-        fontSize: 15,
-        marginTop: 30,
+        fontSize: 16,
+        marginTop: 40,
         color: '#2F7DCA',
-        marginBottom: 5
+        marginBottom: 5,
+        marginLeft: 30,
+        marginRight: 30
     },
     input: {
         backgroundColor: '#F7F8F9',
@@ -48,31 +51,42 @@ export const loginStyles = StyleSheet.create({
         shadowRadius: 2,
         borderRadius: 5,
         height: 40,
-        width: width * 0.8,
+        width: 'auto',
         fontFamily: 'Urbanist',
         fontSize: 18,
         fontWeight: 500,
         paddingLeft: 10,
-        marginBottom: 12
+        marginBottom: 12,
+        marginLeft: 30,
+        marginRight: 30
     },
     viewBaixoSenha: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        width: width * 0.8,
+        width: 'auto',
+        marginLeft: 30,
+        marginRight: 30
     },
     sectionCheck: {
         flexDirection: 'row',
         alignItems: 'center',
     },
     checkbox: {
-        backgroundColor: '#000',
+        backgroundColor: '#E0F4FF',
         borderRadius: 5
     },
     txtCheck: {
         fontFamily: 'Urbanist',
         fontWeight: 600,
-        fontSize: 15,
+        fontSize: 16,
         marginLeft: 6
+    },
+    txtEsqueci: {
+        fontFamily: 'Urbanist',
+        fontWeight: 600,
+        fontSize: 16,
+        marginLeft: 6,
+        color: '#2F7DCA'
     }
 })

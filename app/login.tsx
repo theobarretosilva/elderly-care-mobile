@@ -43,7 +43,7 @@ export default function Login() {
             <Checkbox style={loginStyles.checkbox} value={isChecked} onValueChange={setChecked} />
             <Text style={loginStyles.txtCheck}>Manter conectado</Text>
           </View>
-          <Text>Esqueci a senha</Text>
+          <Text style={loginStyles.txtEsqueci}>Esqueci a senha</Text>
         </View>
       </View>
     </KeyboardAvoidingView>
