@@ -3,21 +3,22 @@ import { useState } from "react";
 import { Image, KeyboardAvoidingView, Platform, Pressable, Text, TextInput, View } from "react-native";
 import { loginStyles } from "../src/styles/login.styles";
 import { Checkbox } from 'expo-checkbox';
+import { useAuth } from "../src/context/AuthContext";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isChecked, setChecked] = useState(false);
 
-  function handleLogin() {
-    if (!email || !password) {
-      alert("Preencha todos os campos");
-      return;
+  const { login, loading } = useAuth();
+
+  async function handleLogin() {
+    try {
+      await login(email, password);
+
+    } catch (error: any) {
+      alert(error.message);
     }
-
-    console.log({ email, password });
-
-    router.replace("/(tabs)");
   }
 
   return (
@@ -53,12 +54,10 @@ export default function Login() {
           </View>
           <Text style={loginStyles.txtEsqueci}>Esqueci a senha</Text>
         </View>
-        <Pressable
-          style={loginStyles.btnEntrar}
-          onPress={handleLogin}
-          disabled={!email || !password}
-        >
-          <Text style={loginStyles.txtEntrar}>Entrar</Text>
+        <Pressable style={loginStyles.btnEntrar} onPress={handleLogin}>
+          <Text style={loginStyles.txtEntrar}>
+            {loading ? "Entrando..." : "Entrar"}
+          </Text>
         </Pressable>
         <Text style={loginStyles.txtNao}>
           Não tem conta?
